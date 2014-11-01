@@ -1,2 +1,2 @@
-# 260 Text game assignment.
-# Dan Coleman and Sam Livingston.
+260 Text game assignment.
+Dan Coleman and Sam Livingston.
