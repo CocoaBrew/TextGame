@@ -1,18 +1,21 @@
 package textGame;
 
-import java.util.ArrayList;
-
 public class Student implements Person
 {
-	private ArrayList<Item> possessions;
+	private String info;
 	
-	public Student()
+	public Student(String information)
 	{
-		possessions = new ArrayList<>();
+		info = information;
 	}
 	
-	public void takeItem(PortableItem thing)
+	public String getInfo()
 	{
-		possessions.add(thing);
+		return info;
+	}
+	
+	public void speak()
+	{
+		System.out.println(info);
 	}
 }

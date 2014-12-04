@@ -1,6 +1,12 @@
 package textGame;
 
-public class TrueFalseQ implements Question
+public class TrueFalseQ extends Question
 {
-
+	private String question;
+	private boolean answer;
+	
+	public TrueFalseQ()
+	{
+		
+	}
 }

@@ -1,6 +1,6 @@
 package textGame;
 
-public interface Question 
+public abstract class Question 
 {
-
+	private String question;
 }
