@@ -5,19 +5,18 @@ import java.util.ArrayList;
 public class Outside extends Site
 {
 	private String pathName;
-	private ArrayList<String> things;
-	private ArrayList<Site> exits;
+	private ArrayList<Item> artifacts = new ArrayList<>();;
+	private ArrayList<Site> exits = new ArrayList<>();
 	private Weather weather;
 	
 	public Outside(String name)
 	{
 		pathName = name.trim();
-		things = new ArrayList<>();
-		exits = new ArrayList<>();
 	}
 	
 	public void entry()
 	{
+		System.out.println("You are now outside.");
 		weather = new Weather();
 		weather.print();
 	}
@@ -32,6 +31,8 @@ public class Outside extends Site
 				System.out.print(", ");
 			}
 		}
+		
+		System.out.println();
 	}
 	
 	public void setExit(Site area)
@@ -39,13 +40,18 @@ public class Outside extends Site
 		exits.add(area);
 	}
 	
+	public void addArtifacts(Item thing)
+	{
+		artifacts.add(thing);
+	}
+	
 	public void listContents()
 	{
 		System.out.print("You see: ");
-		for (int i = 0; i < things.size(); i++)
+		for (int i = 0; i < artifacts.size(); i++)
 		{
-			System.out.print(things.get(i));
-			if (i < things.size() - 1)
+			System.out.print(artifacts.get(i).getName());
+			if (i < artifacts.size() - 1)
 			{
 				System.out.print(", ");
 			}
@@ -57,5 +63,26 @@ public class Outside extends Site
 	public String getName()
 	{
 		return pathName;
+	}
+
+	///////////////////////////garbage below
+	public ArrayList<Person> getPeopleInRoom() {
+		return null;
+	}
+
+	public Person getPersonInRoom(String name) {
+		return null;
+	}
+
+	public ArrayList<Item> getItemsInRoom() {
+		return null;
+	}
+
+	public Item getItemInRoom(String part2) {
+		return null;
+	}
+	
+	public void removeItem(Item thing) {
+
 	}
 }
